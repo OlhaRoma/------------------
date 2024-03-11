@@ -141,11 +141,12 @@ address {
 .chef-card__photo {
   width: 140px;
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
+  box-shadow: -10px 10px 0 0 var(--color-primary-light), -10px 10px 0 1px var(--color-secondary-dark);
 }
 @media screen and (min-width: 1280px) {
   .chef-card__photo {
     width: 240px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
   }
 }
 .chef-card__title {
@@ -439,7 +440,7 @@ address {
 .contacts-section__map {
   flex-shrink: 0;
   height: 176px;
-  margin: 0 -24px;
+  margin: 0 -24px -20px;
   border-radius: 16px;
   border: none;
 }
@@ -466,7 +467,6 @@ address {
 
 .footer {
   position: relative;
-  text-align: center;
   padding: 32px 0;
   background-color: var(--color-primary-dark);
   background-image: url("../images/footer-background.png");
@@ -476,7 +476,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    text-align: left;
+    background-size: cover;
   }
 }
 .footer::before, .footer::after {
@@ -487,15 +487,27 @@ address {
 }
 .footer::before {
   width: 180px;
-  height: 120px;
+  height: 460px;
   left: 0;
-  background-image: url("../images/decor-bread-small.png");
+  background-image: url("../images/decor-bread-small-mob.png");
+}
+@media screen and (min-width: 768px) {
+  .footer::before {
+    height: 120px;
+    background-image: url("../images/decor-bread-small.png");
+  }
 }
 .footer::after {
-  width: 380px;
-  height: 190px;
+  width: 100px;
+  height: 90px;
   right: 0;
-  background-image: url("../images/decor-bread-large.png");
+  background-image: url("../images/decor-bread-large-mob.png");
+}
+@media screen and (min-width: 768px) {
+  .footer::after {
+    height: 190px;
+    background-image: url("../images/decor-bread-large.png");
+  }
 }
 .footer__container {
   display: flex;
@@ -510,6 +522,7 @@ address {
 .footer__nav, .footer__address {
   display: flex;
   flex-direction: column;
+  text-align: center;
   flex-basis: 50%;
   gap: 20px;
 }
@@ -517,6 +530,7 @@ address {
   .footer__nav, .footer__address {
     flex-direction: row;
     flex-basis: 50%;
+    text-align: left;
   }
 }
 .footer__logo, .footer__menu {
@@ -530,6 +544,7 @@ address {
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 12px;
 }
 .footer__address-link:hover {
   color: var(--brand-color);
@@ -542,6 +557,7 @@ address {
 }
 .footer__address-copyright {
   font-size: 14px;
+  color: var(--color-secondary-dark);
 }
 
 .form-policy {
@@ -565,9 +581,6 @@ address {
 }
 .formats-section__container {
   overflow: hidden;
-}
-.formats-section__title {
-  margin-bottom: 80px;
 }
 .formats-section__list {
   margin-bottom: 32px;
