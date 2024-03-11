@@ -1,0 +1,14 @@
+:root {
+  --brand-color: #819b57;
+  --brand-color-light: #cfcfbc;
+  --brand-color-dark: #465929;
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261A;
+  --color-secondary-dark: #A18268;
+}
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;
+
+// scss змінні - потрібні для адаптиву
